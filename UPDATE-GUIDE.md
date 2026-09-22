@@ -298,3 +298,81 @@ git push origin main
 `
 
 约 1-2 分钟后刷新 https://wjq369.github.io/jianqiang-portfolio/ 即可看到最新内容。
+
+---
+
+## 10. ?????Books?
+
+**???** index.html ?? <section id="books">
+
+`html
+<div class="book-card">
+  <div class="book-cover"><span>&#128214; Cover</span></div>
+  <!-- ??????? -->
+  <!-- <img src="images/book-cover.jpg" alt="??" style="width:100%;height:200px;object-fit:cover"> -->
+  <div class="book-info">
+    <h3>??</h3>
+    <p class="book-author">???</p>
+    <p class="book-desc">??????????</p>
+    <div class="book-meta">
+      <span class="tag">??</span>
+      <span class="date">2026</span>
+    </div>
+  </div>
+</div>
+`
+
+---
+
+## 11. ????????Science?
+
+**???** index.html ?? <section id="science">
+
+?????????????
+
+`html
+<article class="card card-article">
+  <div class="card-date">Sep 2026</div>
+  <h3><a href="#">??????</a></h3>
+  <p>???????????????????????</p>
+  <a href="#" class="card-link">Read more &rarr;</a>
+</article>
+`
+
+---
+
+## 12. ?????Bookstore?
+
+**???** index.html ?? <section id="bookstore">
+
+??????????????
+
+`html
+<div class="equip-card">
+  <div class="equip-img"><div class="equip-placeholder">&#128214; Cover</div></div>
+  <div class="equip-info">
+    <span class="equip-status avail">Available</span>
+    <h3>??</h3>
+    <p class="equip-desc">?????</p>
+    <div class="equip-meta"><span>Condition: Like New</span><span class="equip-price">&#165;45</span></div>
+    <a href="#" class="btn btn-outline btn-sm">Inquire</a>
+  </div>
+</div>
+`
+
+????vail????/ sold????
+
+---
+
+## ????
+
+?? index.html ??
+
+`powershell
+cd D:\wjq-obsidian\personal-site
+git add .
+git commit -m "??????"
+git push origin main
+`
+
+? 1-2 ????? https://wjq369.github.io/jianqiang-portfolio/
