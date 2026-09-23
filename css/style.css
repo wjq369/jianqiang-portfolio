@@ -541,8 +541,7 @@ a:hover { color: var(--clr-accent); }
 .book-desc { font-size: 0.875rem; color: var(--clr-text-muted); margin-bottom: 12px; line-height: 1.5; }
 .book-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .book-meta .date { font-size: 0.8125rem; color: var(--clr-text-muted); }
-\n
-/* LANGUAGE TOGGLE */
+\n/* LANGUAGE TOGGLE */
 .lang-toggle {
   background: transparent;
   border: 1px solid var(--clr-primary);
@@ -560,8 +559,12 @@ a:hover { color: var(--clr-accent); }
   background: var(--clr-primary);
   color: #fff;
 }
-[data-lang-en], [data-lang-zh] { display: none; }
+/* Default state (no lang class on body): show EN */
+[data-lang-zh] { display: none !important; }
+[data-lang-en] { display: inline; }
+/* When body has lang-zh: show ZH, hide EN */
 body.lang-zh [data-lang-en] { display: none !important; }
 body.lang-zh [data-lang-zh] { display: inline !important; }
+/* When body has lang-en: show EN, hide ZH */
 body.lang-en [data-lang-zh] { display: none !important; }
 body.lang-en [data-lang-en] { display: inline !important; }
