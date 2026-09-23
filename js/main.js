@@ -58,3 +58,20 @@ if (track) {
   slideshow?.addEventListener('mouseenter', () => clearInterval(timer));
   slideshow?.addEventListener('mouseleave', startTimer);
 }
+\n
+// Language toggle
+const langToggle = document.getElementById('langToggle');
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    const isZh = document.body.classList.contains('lang-zh');
+    document.body.classList.toggle('lang-zh');
+    document.body.classList.toggle('lang-en');
+    langToggle.textContent = isZh ? '中文 / EN' : 'EN / 中文';
+    localStorage.setItem('lang', isZh ? 'zh' : 'en');
+  });
+  const saved = localStorage.getItem('lang');
+  if (saved === 'zh') {
+    document.body.classList.add('lang-zh');
+    langToggle.textContent = 'EN / 中文';
+  }
+}
