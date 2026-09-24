@@ -1,0 +1,7 @@
+﻿/* Inline SVG book covers */
+.book-cover svg, .equip-img svg {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+}
