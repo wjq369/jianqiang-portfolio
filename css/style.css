@@ -1,4 +1,4 @@
-/* Personal Site &mdash; Britannica-inspired */
+﻿/* Personal Site &mdash; Britannica-inspired */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -561,3 +561,10 @@ body.lang-zh [data-lang-zh] { display: inline !important; }
 /* When body has lang-en: show EN, hide ZH */
 body.lang-en [data-lang-zh] { display: none !important; }
 body.lang-en [data-lang-en] { display: inline !important; }
+/* Inline SVG book covers */
+.book-cover svg, .equip-img svg {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+}
