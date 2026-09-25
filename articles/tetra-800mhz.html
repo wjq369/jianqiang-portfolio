@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TETRA Digital Clusters: Why 800MHz Still Matters — Jianqiang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .article-page{padding:80px 24px;max-width:780px;margin:0 auto}
+  .article-page h1{font-family:var(--font-serif);font-size:clamp(1.75rem,4vw,2.5rem);color:var(--clr-primary);margin-bottom:12px}
+  .article-meta{font-size:0.875rem;color:var(--clr-text-muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--clr-border)}
+  .article-page h2{font-family:var(--font-serif);font-size:1.375rem;color:var(--clr-primary);margin-top:32px;margin-bottom:12px}
+  .article-page h3{font-size:1.125rem;color:var(--clr-primary);margin-top:24px;margin-bottom:8px}
+  .article-page p,.article-page li{font-size:1rem;line-height:1.75;color:var(--clr-text);margin-bottom:12px}
+  .article-page ul,.article-page ol{padding-left:24px;margin-bottom:16px}
+  .article-page li{margin-bottom:8px}
+  .back-link{display:inline-block;font-size:0.9375rem;color:var(--clr-primary);border-bottom:1px solid var(--clr-primary);padding-bottom:2px;margin-bottom:32px;text-decoration:none}
+  .back-link:hover{color:var(--clr-accent);border-color:var(--clr-accent)}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><a href="../index.html" class="logo"><span class="logo-mark">J</span><span class="logo-text">Jianqiang</span></a></div></header>
+<div class="article-page">
+<a class="back-link" href="../index.html">&#8592; Back to home</a>
+# TETRA Digital Clusters: Why 800MHz Still Matters
+## 概述
+基于营口、烟台、连云港、仙人岛等港口 TETRA 系统的长期运维经验，论述 800MHz TETRA 数字集群为何在当前场景下仍具不可替代的价值。
+## 关键论点
+### 800MHz 频段优势
+<ul>
+<li>穿透能力强，适合港口、工业区等复杂金属结构环境</li>
+<li>覆盖范围广，单站覆盖半径可达 10-30km，减少基站部署密度和成本</li>
+</ul>
+### 行业必要性
+<ul>
+<li>港口调度对语音通信的可靠性要求极高，TETRA 的组呼、优先调度功能满足关键作业需求</li>
+<li>PDT（Police Digital Trunking）在国内公安系统广泛部署，TETRA 标准的技术积累可复用</li>
+</ul>
+### 运维实践
+<ul>
+<li>驻波比（VSWR）监测是预防性维护的核心手段，VT100 日志是主要数据源</li>
+<li>巡检自动化（parse_logs.py、make_report.py）可将小时级手工工作压缩至分钟级</li>
+</ul>
+## 相关页面
+<ul>
+<li>[[division-of-labour]]（涉及 TETRA 系统架构讨论）</li>
+</ul>
+## 待核实 / 未确认
+<ul>
+<li>具体站点数量和覆盖面积数据需与最新维护记录核对 [待核实]</li>
+</ul>
+## 相关资料
+<ul>
+<li>原始资料：个人巡检工作记录</li>
+<li>写作日期：2026-08</li>
+</ul>
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--clr-border)">
+<a class="back-link" href="../index.html">&#8592; Back to home</a>
+</div>
+</div>
+<footer class="site-footer" style="padding:32px 24px"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>&copy; 2026 Jianqiang. All rights reserved.</span></div></div></footer>
+</body></html>

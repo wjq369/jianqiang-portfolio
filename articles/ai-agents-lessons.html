@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Building Better AI Agents: Lessons from the Field — Jianqiang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .article-page{padding:80px 24px;max-width:780px;margin:0 auto}
+  .article-page h1{font-family:var(--font-serif);font-size:clamp(1.75rem,4vw,2.5rem);color:var(--clr-primary);margin-bottom:12px}
+  .article-meta{font-size:0.875rem;color:var(--clr-text-muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--clr-border)}
+  .article-page h2{font-family:var(--font-serif);font-size:1.375rem;color:var(--clr-primary);margin-top:32px;margin-bottom:12px}
+  .article-page h3{font-size:1.125rem;color:var(--clr-primary);margin-top:24px;margin-bottom:8px}
+  .article-page p,.article-page li{font-size:1rem;line-height:1.75;color:var(--clr-text);margin-bottom:12px}
+  .article-page ul,.article-page ol{padding-left:24px;margin-bottom:16px}
+  .article-page li{margin-bottom:8px}
+  .back-link{display:inline-block;font-size:0.9375rem;color:var(--clr-primary);border-bottom:1px solid var(--clr-primary);padding-bottom:2px;margin-bottom:32px;text-decoration:none}
+  .back-link:hover{color:var(--clr-accent);border-color:var(--clr-accent)}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><a href="../index.html" class="logo"><span class="logo-mark">J</span><span class="logo-text">Jianqiang</span></a></div></header>
+<div class="article-page">
+<a class="back-link" href="../index.html">&#8592; Back to home</a>
+# Building Better AI Agents: Lessons from the Field
+## 概述
+本文基于实际设计自主编码 Agent 的经验，探讨什么样的方案在实践中真正有效——从提示词设计到错误恢复模式。核心观点：简单的约束比复杂的编排更能提升可靠性。
+## 关键经验
+### 提示词设计
+<ul>
+<li>给出明确的任务边界和失败条件，比冗长的指令更有效（来源：[personal observation]）</li>
+<li>Agent 的错误往往来自对隐式假设的理解偏差，显式约束可大幅降低幻觉率</li>
+</ul>
+### 错误恢复模式
+<ul>
+<li>重试 + 上下文回退是最实用的恢复策略，不需要复杂的恢复编排</li>
+<li>记录错误轨迹比事后修复更有价值——用于迭代改进 prompt 和 tool 设计</li>
+</ul>
+### 实践教训
+<ul>
+<li>Agent 系统的瓶颈通常不在模型能力，而在工具接口设计和上下文管理</li>
+<li>"越复杂越好"是常见误区，简单可预测的系统比全能但脆弱的系统更可靠</li>
+</ul>
+## 相关页面
+<ul>
+<li>[[agent-long-term-memory]]</li>
+<li>[[agentic-benchmark]]</li>
+</ul>
+## 待核实 / 未确认
+<ul>
+<li>本文基于有限场景观察，结论的普适性需更多实践验证 [未确认]</li>
+</ul>
+## 相关资料
+<ul>
+<li>原始资料：个人工作笔记（未归档）</li>
+<li>写作日期：2026-09</li>
+</ul>
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--clr-border)">
+<a class="back-link" href="../index.html">&#8592; Back to home</a>
+</div>
+</div>
+<footer class="site-footer" style="padding:32px 24px"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>&copy; 2026 Jianqiang. All rights reserved.</span></div></div></footer>
+</body></html>

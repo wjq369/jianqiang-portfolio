@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The Case for Simple Tools — Jianqiang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .article-page{padding:80px 24px;max-width:780px;margin:0 auto}
+  .article-page h1{font-family:var(--font-serif);font-size:clamp(1.75rem,4vw,2.5rem);color:var(--clr-primary);margin-bottom:12px}
+  .article-meta{font-size:0.875rem;color:var(--clr-text-muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--clr-border)}
+  .article-page h2{font-family:var(--font-serif);font-size:1.375rem;color:var(--clr-primary);margin-top:32px;margin-bottom:12px}
+  .article-page h3{font-size:1.125rem;color:var(--clr-primary);margin-top:24px;margin-bottom:8px}
+  .article-page p,.article-page li{font-size:1rem;line-height:1.75;color:var(--clr-text);margin-bottom:12px}
+  .article-page ul,.article-page ol{padding-left:24px;margin-bottom:16px}
+  .article-page li{margin-bottom:8px}
+  .back-link{display:inline-block;font-size:0.9375rem;color:var(--clr-primary);border-bottom:1px solid var(--clr-primary);padding-bottom:2px;margin-bottom:32px;text-decoration:none}
+  .back-link:hover{color:var(--clr-accent);border-color:var(--clr-accent)}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><a href="../index.html" class="logo"><span class="logo-mark">J</span><span class="logo-text">Jianqiang</span></a></div></header>
+<div class="article-page">
+<a class="back-link" href="../index.html">&#8592; Back to home</a>
+# The Case for Simple Tools
+## 概述
+最好的工程决策往往导向最简单的实现。本文探讨为何追求简单性是工程质量的真正标志，以及复杂系统如何因过度设计而变得脆弱。
+## 核心观点
+### 简单性的价值
+<ul>
+<li>简单意味着可理解，可理解意味着可维护</li>
+<li>每多一个抽象层，就多一个潜在的故障点</li>
+<li>代码量不是技术深度的指标，相反，精简往往是更高水平的体现</li>
+</ul>
+### 决策框架
+<ul>
+<li>重复三次的事就该自动化，但不意味着要构建复杂系统</li>
+<li>优先使用标准库和平台原生能力，而非引入新依赖</li>
+<li>在简单方案能解决问题时，不添加"未来可能用到"的功能</li>
+</ul>
+### 常见陷阱
+<ul>
+<li>YAGNI（You Aren't Gonna Need It）：为未发生的场景做设计，是最常见的过度工程</li>
+<li>配置泛滥：一个功能一个配置项，最终维护成本远超功能价值</li>
+</ul>
+## 相关页面
+<ul>
+<li>[[book-to-skill]]（工具与技能化的讨论）</li>
+</ul>
+## 待核实 / 未确认
+<ul>
+<li>本文观点基于个人工程经验，缺乏系统性实证研究支撑 [未确认]</li>
+</ul>
+## 相关资料
+<ul>
+<li>原始资料：个人工作笔记</li>
+<li>写作日期：2026-07</li>
+</ul>
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--clr-border)">
+<a class="back-link" href="../index.html">&#8592; Back to home</a>
+</div>
+</div>
+<footer class="site-footer" style="padding:32px 24px"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>&copy; 2026 Jianqiang. All rights reserved.</span></div></div></footer>
+</body></html>
