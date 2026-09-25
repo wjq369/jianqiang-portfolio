@@ -568,3 +568,6 @@ body.lang-en [data-lang-en] { display: inline !important; }
   max-height: 100%;
   display: block;
 }
+
+.music-hidden { display: none; }
+.music-item.show { display: flex; }
