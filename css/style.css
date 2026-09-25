@@ -482,13 +482,6 @@ a:hover { color: var(--clr-accent); }
   box-shadow: 0 8px 30px rgba(26,58,92,0.1);
   transform: translateY(-2px);
 }
-.video-thumb {
-  height: 180px;
-  background: linear-gradient(135deg, #1a3a5c, #2d5a87);
-  display: grid; place-items: center;
-  color: rgba(255,255,255,0.6);
-  font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em;
-}
 .video-info { padding: 20px; }
 .video-info h3 {
   font-family: var(--font-serif);
