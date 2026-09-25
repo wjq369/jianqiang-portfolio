@@ -75,3 +75,14 @@ if (langToggle) {
     langToggle.textContent = 'EN / 中文';
   }
 }
+// Music show more toggle
+const musicToggle = document.getElementById('musicToggle');
+if (musicToggle) {
+  musicToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const hidden = document.querySelectorAll('.music-hidden');
+    const allShown = Array.from(hidden).every(el => el.classList.contains('show'));
+    hidden.forEach(el => el.classList.toggle('show'));
+    musicToggle.textContent = allShown ? '更多歌曲 &rarr;' : '收起 &larr;';
+  });
+}
