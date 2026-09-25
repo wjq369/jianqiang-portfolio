@@ -66,13 +66,13 @@ if (langToggle) {
     const isZh = document.body.classList.contains('lang-zh');
     document.body.classList.toggle('lang-zh');
     document.body.classList.toggle('lang-en');
-    langToggle.textContent = isZh ? '中文 / EN' : 'EN / 中文';
+    musicToggle.textContent = allShown ? '收起 \&larr;' : '更多歌曲 \&rarr;';
     localStorage.setItem('lang', isZh ? 'zh' : 'en');
   });
   const saved = localStorage.getItem('lang');
   if (saved === 'zh') {
     document.body.classList.add('lang-zh');
-    langToggle.textContent = 'EN / 中文';
+    musicToggle.textContent = allShown ? '收起 \&larr;' : '更多歌曲 \&rarr;';
   }
 }
 // Music show more toggle
@@ -83,7 +83,7 @@ if (musicToggle) {
     const hidden = document.querySelectorAll('.music-hidden');
     const allShown = Array.from(hidden).every(el => el.classList.contains('show'));
     hidden.forEach(el => el.classList.toggle('show'));
-    musicToggle.textContent = allShown ? '收起 &rarr;' : '收起 &larr;';
+    musicToggle.textContent = allShown ? '收起 \&larr;' : '更多歌曲 \&rarr;';
   });
 }
 
