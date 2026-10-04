@@ -77,7 +77,7 @@ a:hover { color: var(--clr-accent); }
 }
 
 /* The 12 section links cannot fit on one row with the logo below this width. */
-@media (max-width: 1090px) {
+@media (max-width: 1160px) {
   .nav-toggle { display: flex; }
   .main-nav {
     display: none; position: absolute; top: 64px; left: 0; right: 0;
