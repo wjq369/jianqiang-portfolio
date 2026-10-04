@@ -503,7 +503,7 @@ a:hover { color: var(--clr-accent); }
   padding-top: 20px;
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
   font-size: 0.8125rem; color: rgba(255,255,255,0.4);
-}\n
+}
 /* VIDEO */
 .video-grid {
   display: grid;
@@ -531,7 +531,7 @@ a:hover { color: var(--clr-accent); }
 .video-info h3 a:hover { color: var(--clr-accent); }
 .video-desc { font-size: 0.875rem; color: var(--clr-text-muted); margin-bottom: 12px; }
 .video-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.video-meta .date { font-size: 0.8125rem; color: var(--clr-text-muted); }\n
+.video-meta .date { font-size: 0.8125rem; color: var(--clr-text-muted); }
 /* BOOKS */
 .book-grid {
   display: grid;
@@ -566,7 +566,7 @@ a:hover { color: var(--clr-accent); }
 .book-desc { font-size: 0.875rem; color: var(--clr-text-muted); margin-bottom: 12px; line-height: 1.5; }
 .book-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .book-meta .date { font-size: 0.8125rem; color: var(--clr-text-muted); }
-\n/* LANGUAGE TOGGLE */
+/* LANGUAGE TOGGLE */
 .lang-toggle {
   background: transparent;
   border: 1px solid var(--clr-primary);
@@ -584,32 +584,14 @@ a:hover { color: var(--clr-accent); }
   background: var(--clr-primary);
   color: #fff;
 }
-/* Default state (no lang class on body): show EN */
-[data-lang-zh] { display: none !important; }
-[data-lang-en] { display: inline; }
-/* When body has lang-zh: show ZH, hide EN */
-body.lang-zh [data-lang-en] { display: none !important; }
-body.lang-zh [data-lang-zh] { display: inline !important; }
-/* When body has lang-en: show EN, hide ZH */
-body.lang-en [data-lang-zh] { display: none !important; }
-body.lang-en [data-lang-en] { display: inline !important; }
+/* Language switching: main.js rewrites the content of [data-lang-*] elements,
+   so nothing here may force a display value. Every element that carries these
+   attributes has both, and headings and paragraphs must stay block. */
+[data-lang-zh]:not([data-lang-en]) { display: none; }
+/* Copy available in one language only: hide whatever does not match. */
+body.lang-zh [data-lang-en]:not([data-lang-zh]) { display: none !important; }
+body.lang-en [data-lang-zh]:not([data-lang-en]) { display: none !important; }
 /* Inline SVG book covers */
-body.lang-en .svg-cn { display: none !important; }
-body.lang-en .svg-en { display: inline !important; }
-body.lang-zh .svg-en { display: none !important; }
-body.lang-zh .svg-cn { display: inline !important; }
-body.lang-en .svg-cn { display: none !important; }
-body.lang-en .svg-en { display: inline !important; }
-body.lang-zh .svg-en { display: none !important; }
-body.lang-zh .svg-cn { display: inline !important; }
-body.lang-en .svg-cn { display: none !important; }
-body.lang-en .svg-en { display: inline !important; }
-body.lang-zh .svg-en { display: none !important; }
-body.lang-zh .svg-cn { display: inline !important; }
-body.lang-en .svg-cn { display: none !important; }
-body.lang-en .svg-en { display: inline !important; }
-body.lang-zh .svg-en { display: none !important; }
-body.lang-zh .svg-cn { display: inline !important; }
 body.lang-en .svg-cn { display: none !important; }
 body.lang-en .svg-en { display: inline !important; }
 body.lang-zh .svg-en { display: none !important; }
