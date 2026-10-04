@@ -401,14 +401,11 @@ a:hover { color: var(--clr-accent); }
   gap: 16px;
 }
 .photo-item { overflow: hidden; border-radius: var(--radius); }
-.photo-item.wide { grid-column: span 2; }
-.photo-item.tall { grid-row: span 2; }
 .photo-placeholder {
   width: 100%;
+  aspect-ratio: 16 / 9;
   background: linear-gradient(135deg, #d4dde8, #e8eef5);
 }
-.photo-item.wide .photo-placeholder { aspect-ratio: 16 / 9; }
-.photo-item.tall .photo-placeholder { aspect-ratio: 3 / 4; }
 .photo-caption { padding: 12px 4px; }
 .photo-caption h4 {
   font-family: var(--font-serif);
@@ -442,9 +439,6 @@ a:hover { color: var(--clr-accent); }
 
 @media (max-width: 768px) {
   .photo-grid { grid-template-columns: 1fr; }
-  .photo-item.wide, .photo-item.tall { grid-column: span 1; grid-row: span 1; }
-  .photo-item.wide .photo-placeholder { aspect-ratio: 16 / 9; }
-  .photo-item.tall .photo-placeholder { aspect-ratio: 3 / 4; }
 }
 
 
