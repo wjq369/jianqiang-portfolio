@@ -511,7 +511,7 @@ a:hover { color: var(--clr-accent); }
 /* VIDEO */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 .video-card {
@@ -524,6 +524,13 @@ a:hover { color: var(--clr-accent); }
 .video-card:hover {
   box-shadow: 0 8px 30px rgba(26,58,92,0.1);
   transform: translateY(-2px);
+}
+.video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
 }
 .video-info { padding: 20px; }
 .video-info h3 {
