@@ -357,20 +357,22 @@ a:hover { color: var(--clr-accent); }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #000;
-  border: 3px solid #fff;
+  background: transparent;
+  border: none;
   color: #fff;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
+  line-height: 1;
   cursor: pointer;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  opacity: 0.85;
   display: grid;
   place-items: center;
   z-index: 9999;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  transition: opacity 0.2s;
 }
-.slideshow-btn:hover { background: rgba(0,0,0,0.8); }
+.slideshow-btn:hover { opacity: 1; }
 .slideshow-btn.prev { left: 8px; }
 .slideshow-btn.next { right: 8px; }
 
