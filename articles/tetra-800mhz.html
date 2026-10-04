@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>TETRA Digital Clusters: Why 800MHz Still Matters — Jianqiang</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TETRA Digital Clusters: Why 800MHz Still Matters &mdash; Jianqiang</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,54 +12,64 @@
   .article-page{padding:80px 24px;max-width:780px;margin:0 auto}
   .article-page h1{font-family:var(--font-serif);font-size:clamp(1.75rem,4vw,2.5rem);color:var(--clr-primary);margin-bottom:12px}
   .article-meta{font-size:0.875rem;color:var(--clr-text-muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--clr-border)}
-  .article-page h2{font-family:var(--font-serif);font-size:1.375rem;color:var(--clr-primary);margin-top:32px;margin-bottom:12px}
-  .article-page h3{font-size:1.125rem;color:var(--clr-primary);margin-top:24px;margin-bottom:8px}
-  .article-page p,.article-page li{font-size:1rem;line-height:1.75;color:var(--clr-text);margin-bottom:12px}
-  .article-page ul,.article-page ol{padding-left:24px;margin-bottom:16px}
+  .article-page h2{font-family:var(--font-serif);font-size:1.375rem;color:var(--clr-primary);margin-top:36px;margin-bottom:12px}
+  .article-page p,.article-page li{font-size:1rem;line-height:1.75;color:var(--clr-text);margin-bottom:14px}
+  .article-page ul{padding-left:22px;margin-bottom:18px}
   .article-page li{margin-bottom:8px}
+  .article-lead{font-size:1.0625rem;color:var(--clr-text-muted)}
   .back-link{display:inline-block;font-size:0.9375rem;color:var(--clr-primary);border-bottom:1px solid var(--clr-primary);padding-bottom:2px;margin-bottom:32px;text-decoration:none}
   .back-link:hover{color:var(--clr-accent);border-color:var(--clr-accent)}
+  .article-footer{padding:32px 24px}
+  .article-footer .footer-bottom{justify-content:center}
 </style>
 </head>
 <body>
-<header class="site-header"><div class="container header-inner"><a href="../index.html" class="logo"><span class="logo-mark">J</span><span class="logo-text">Jianqiang</span></a></div></header>
-<div class="article-page">
-<a class="back-link" href="../index.html">&#8592; Back to home</a>
-# TETRA Digital Clusters: Why 800MHz Still Matters
-## 概述
-基于营口、烟台、连云港、仙人岛等港口 TETRA 系统的长期运维经验，论述 800MHz TETRA 数字集群为何在当前场景下仍具不可替代的价值。
-## 关键论点
-### 800MHz 频段优势
-<ul>
-<li>穿透能力强，适合港口、工业区等复杂金属结构环境</li>
-<li>覆盖范围广，单站覆盖半径可达 10-30km，减少基站部署密度和成本</li>
-</ul>
-### 行业必要性
-<ul>
-<li>港口调度对语音通信的可靠性要求极高，TETRA 的组呼、优先调度功能满足关键作业需求</li>
-<li>PDT（Police Digital Trunking）在国内公安系统广泛部署，TETRA 标准的技术积累可复用</li>
-</ul>
-### 运维实践
-<ul>
-<li>驻波比（VSWR）监测是预防性维护的核心手段，VT100 日志是主要数据源</li>
-<li>巡检自动化（parse_logs.py、make_report.py）可将小时级手工工作压缩至分钟级</li>
-</ul>
-## 相关页面
-<ul>
-<li>[[division-of-labour]]（涉及 TETRA 系统架构讨论）</li>
-</ul>
-## 待核实 / 未确认
-<ul>
-<li>具体站点数量和覆盖面积数据需与最新维护记录核对 [待核实]</li>
-</ul>
-## 相关资料
-<ul>
-<li>原始资料：个人巡检工作记录</li>
-<li>写作日期：2026-08</li>
-</ul>
-<div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--clr-border)">
-<a class="back-link" href="../index.html">&#8592; Back to home</a>
-</div>
-</div>
-<footer class="site-footer" style="padding:32px 24px"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>&copy; 2026 Jianqiang. All rights reserved.</span></div></div></footer>
-</body></html>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="header-brand">
+      <a href="../index.html" class="logo">
+        <span class="logo-mark">J</span>
+        <span class="logo-text">Jianqiang</span>
+      </a>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">ZH / EN</button>
+    </div>
+  </div>
+</header>
+
+<article class="article-page">
+  <a class="back-link" href="../index.html" data-lang-zh="&larr; 返回首页">&larr; Back to home</a>
+
+  <h1 data-lang-zh="TETRA 数字集群：800MHz 为什么依然重要">TETRA Digital Clusters: Why 800MHz Still Matters</h1>
+  <p class="article-meta" data-lang-zh="2026 年 8 月 &middot; 无线通信">August 2026 &middot; Radio systems</p>
+
+  <p class="article-lead" data-lang-zh="营口、烟台、连云港、仙人岛几个港口 TETRA 系统的长期运维记录，以及 800MHz 数字集群在今天的港口场景里为什么依然不可替代。">Notes from maintaining TETRA systems at several Chinese ports &mdash; Yingkou, Yantai, Lianyungang, Xianrendao &mdash; and why 800MHz digital trunking still holds its place there.</p>
+
+  <h2 data-lang-zh="港口为什么吃 800MHz">Why 800 MHz wins at a port</h2>
+  <p data-lang-zh="穿透力强。港口和工业区是金属结构最密集的环境之一，集装箱、吊机、厂房层层叠叠，频段选得低一点，链路就稳一点。">Penetration matters. A port is one of the densest metal environments around &mdash; stacked containers, cranes, sheds. A lower band keeps the link alive where higher frequencies start bouncing.</p>
+  <p data-lang-zh="覆盖范围大。单站覆盖半径可达 10&ndash;30 公里，能大幅减少基站密度，也就直接压低了部署和运维成本。">Reach matters too. A single site can cover a radius of 10 to 30 km, which cuts the number of base stations needed, and with it the cost of building and maintaining the network.</p>
+
+  <h2 data-lang-zh="行业为什么还需要它">Why the industry still needs it</h2>
+  <p data-lang-zh="港口调度对语音通信可靠性的要求极高。TETRA 的组呼、优先调度这些功能，正好对应关键作业的需求——这些不是「能不能打个电话」的问题，而是「命令能不能一次传到所有人」。">Port dispatch asks a lot of voice communication. Group call and priority dispatch map directly onto critical operations: the question is not whether a call can be placed, but whether an instruction reaches everyone at once.</p>
+  <p data-lang-zh="PDT 在国内公安系统已广泛部署，TETRA 标准上积累的技术经验可以复用，这降低了继续使用它的边际成本。">PDT is already widely deployed across domestic public security systems, so experience built on the TETRA standard transfers, which lowers the marginal cost of staying with it.</p>
+
+  <h2 data-lang-zh="怎么把它维护好">Keeping it alive</h2>
+  <p data-lang-zh="驻波比（VSWR）监测是预防性维护的核心手段。它能在链路真正出问题之前，先暴露出天线、馈线这些最容易老化的环节。VT100 日志是这项监测的主要数据来源。">VSWR monitoring is the backbone of preventive maintenance. It surfaces the parts that age first &mdash; antennas, feeders &mdash; before the link actually fails, and the VT100 logs are where that measurement lives.</p>
+  <p data-lang-zh="把巡检自动化之后，原本以小时计的手工日志解析，被压缩到分钟级。省下来的不是打字时间，而是让「每站每次都做完整检查」这件事变得可行。">Automating the inspection pipeline compresses hours of manual log parsing into minutes. What that buys is not typing time: it makes a full check on every site, every round, actually feasible.</p>
+
+  <h2 data-lang-zh="还没核对的">Not yet verified</h2>
+  <p data-lang-zh="站点数量和覆盖面积的具体数字，要跟最新维护记录核对之后才能写死。本文只写方法与判断，不写还没确认的数字。">The exact number of sites and the covered area need to be checked against the latest maintenance records before they are written down. The method and the judgement are what this piece is about.</p>
+</article>
+
+<footer class="site-footer article-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jianqiang. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

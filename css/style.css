@@ -590,12 +590,14 @@ a:hover { color: var(--clr-accent); }
   color: #fff;
 }
 /* Language switching: main.js rewrites the content of [data-lang-*] elements,
-   so nothing here may force a display value. Every element that carries these
-   attributes has both, and headings and paragraphs must stay block. */
+   so nothing here may force a display value — headings and paragraphs must
+   keep their block layout. */
 [data-lang-zh]:not([data-lang-en]) { display: none; }
-/* Copy available in one language only: hide whatever does not match. */
+/* Copy available in one language only: hide it unless that language is active,
+   and restore its natural display when it is. */
 body.lang-zh [data-lang-en]:not([data-lang-zh]) { display: none !important; }
 body.lang-en [data-lang-zh]:not([data-lang-en]) { display: none !important; }
+body.lang-zh [data-lang-zh]:not([data-lang-en]) { display: revert !important; }
 /* Inline SVG book covers */
 body.lang-en .svg-cn { display: none !important; }
 body.lang-en .svg-en { display: inline !important; }

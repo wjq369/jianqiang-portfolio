@@ -10,6 +10,14 @@ window.I18N_ZH = {
   // Page title
   "Jianqiang — Personal Site v2": "建强 — 个人网站",
 
+  // Article page titles
+  "Building Better AI Agents: Lessons from the Field — Jianqiang": "打造更好的 AI 智能体：来自一线的经验 — 建强",
+  "TETRA Digital Clusters: Why 800MHz Still Matters — Jianqiang": "TETRA 数字集群：800MHz 为什么依然重要 — 建强",
+  "The Case for Simple Tools — Jianqiang": "为简单工具辩护 — 建强",
+  "Wealth of Nations: Core Ideas — Jianqiang": "国富论核心思想解读 — 建强",
+  "The Organon and Modern Logic — Jianqiang": "工具论与现代逻辑 — 建强",
+  "Einstein on Education — Jianqiang": "爱因斯坦的教育观 — 建强",
+
   // Navigation
   "Articles": "文章",
   "Equipment": "设备",

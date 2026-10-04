@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Building Better AI Agents: Lessons from the Field — Jianqiang</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Better AI Agents: Lessons from the Field &mdash; Jianqiang</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,55 +12,65 @@
   .article-page{padding:80px 24px;max-width:780px;margin:0 auto}
   .article-page h1{font-family:var(--font-serif);font-size:clamp(1.75rem,4vw,2.5rem);color:var(--clr-primary);margin-bottom:12px}
   .article-meta{font-size:0.875rem;color:var(--clr-text-muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--clr-border)}
-  .article-page h2{font-family:var(--font-serif);font-size:1.375rem;color:var(--clr-primary);margin-top:32px;margin-bottom:12px}
-  .article-page h3{font-size:1.125rem;color:var(--clr-primary);margin-top:24px;margin-bottom:8px}
-  .article-page p,.article-page li{font-size:1rem;line-height:1.75;color:var(--clr-text);margin-bottom:12px}
-  .article-page ul,.article-page ol{padding-left:24px;margin-bottom:16px}
+  .article-page h2{font-family:var(--font-serif);font-size:1.375rem;color:var(--clr-primary);margin-top:36px;margin-bottom:12px}
+  .article-page p,.article-page li{font-size:1rem;line-height:1.75;color:var(--clr-text);margin-bottom:14px}
+  .article-page ul{padding-left:22px;margin-bottom:18px}
   .article-page li{margin-bottom:8px}
+  .article-lead{font-size:1.0625rem;color:var(--clr-text-muted)}
   .back-link{display:inline-block;font-size:0.9375rem;color:var(--clr-primary);border-bottom:1px solid var(--clr-primary);padding-bottom:2px;margin-bottom:32px;text-decoration:none}
   .back-link:hover{color:var(--clr-accent);border-color:var(--clr-accent)}
+  .article-footer{padding:32px 24px}
+  .article-footer .footer-bottom{justify-content:center}
 </style>
 </head>
 <body>
-<header class="site-header"><div class="container header-inner"><a href="../index.html" class="logo"><span class="logo-mark">J</span><span class="logo-text">Jianqiang</span></a></div></header>
-<div class="article-page">
-<a class="back-link" href="../index.html">&#8592; Back to home</a>
-# Building Better AI Agents: Lessons from the Field
-## 概述
-本文基于实际设计自主编码 Agent 的经验，探讨什么样的方案在实践中真正有效——从提示词设计到错误恢复模式。核心观点：简单的约束比复杂的编排更能提升可靠性。
-## 关键经验
-### 提示词设计
-<ul>
-<li>给出明确的任务边界和失败条件，比冗长的指令更有效（来源：[personal observation]）</li>
-<li>Agent 的错误往往来自对隐式假设的理解偏差，显式约束可大幅降低幻觉率</li>
-</ul>
-### 错误恢复模式
-<ul>
-<li>重试 + 上下文回退是最实用的恢复策略，不需要复杂的恢复编排</li>
-<li>记录错误轨迹比事后修复更有价值——用于迭代改进 prompt 和 tool 设计</li>
-</ul>
-### 实践教训
-<ul>
-<li>Agent 系统的瓶颈通常不在模型能力，而在工具接口设计和上下文管理</li>
-<li>"越复杂越好"是常见误区，简单可预测的系统比全能但脆弱的系统更可靠</li>
-</ul>
-## 相关页面
-<ul>
-<li>[[agent-long-term-memory]]</li>
-<li>[[agentic-benchmark]]</li>
-</ul>
-## 待核实 / 未确认
-<ul>
-<li>本文基于有限场景观察，结论的普适性需更多实践验证 [未确认]</li>
-</ul>
-## 相关资料
-<ul>
-<li>原始资料：个人工作笔记（未归档）</li>
-<li>写作日期：2026-09</li>
-</ul>
-<div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--clr-border)">
-<a class="back-link" href="../index.html">&#8592; Back to home</a>
-</div>
-</div>
-<footer class="site-footer" style="padding:32px 24px"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>&copy; 2026 Jianqiang. All rights reserved.</span></div></div></footer>
-</body></html>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="header-brand">
+      <a href="../index.html" class="logo">
+        <span class="logo-mark">J</span>
+        <span class="logo-text">Jianqiang</span>
+      </a>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">ZH / EN</button>
+    </div>
+  </div>
+</header>
+
+<article class="article-page">
+  <a class="back-link" href="../index.html" data-lang-zh="&larr; 返回首页">&larr; Back to home</a>
+
+  <h1 data-lang-zh="打造更好的 AI 智能体：来自一线的经验">Building Better AI Agents: Lessons from the Field</h1>
+  <p class="article-meta" data-lang-zh="2026 年 9 月 &middot; AI 与工程">September 2026 &middot; AI &amp; engineering</p>
+
+  <p class="article-lead" data-lang-zh="设计自主编程智能体时记下的一些经验：哪些做法站得住，哪些不成立，以及真正的瓶颈在哪里。">Notes from designing autonomous coding agents: what held up, what did not, and where the real bottleneck turned out to be.</p>
+
+  <h2 data-lang-zh="先把边界写清楚">Start with boundaries, not instructions</h2>
+  <p data-lang-zh="明确的任务边界和失败条件，比冗长详尽的指令更有效。如果智能体要从一段散文里推断任务形状，它就会用自己的假设去填空白——大部分返工都来自这里。">Clear task boundaries and explicit failure conditions beat long, exhaustive instructions. When an agent has to infer the shape of a task from prose, it fills the gaps with its own assumptions, and that is where most of the wasted work comes from.</p>
+  <p data-lang-zh="写清楚什么算「完成」、什么算「停下来问人」，只需要几行，却能消掉一整类失败。">Naming what counts as done, and what counts as stop and ask, costs a few lines and removes a whole class of failures.</p>
+
+  <h2 data-lang-zh="真正有效的恢复模式">Recovery patterns that pay off</h2>
+  <p data-lang-zh="我用下来最实用的恢复策略很朴素：重试，并把上下文回滚到最近一个可信状态。复杂的恢复编排往往只是扩大了面积，并没有提高可靠性。">The most practical recovery strategy I have landed on is boring: retry, with the context rolled back to the last known-good state. Elaborate recovery orchestration mostly adds surface area without adding reliability.</p>
+  <p data-lang-zh="记录错误轨迹比事后修 bug 更有价值。智能体试过什么、怎么失败的，这些记录会反过来改进提示词与工具设计。">Recording the error trail is worth more than fixing errors after the fact. A record of what the agent tried, and how it failed, is what feeds back into prompt and tool design.</p>
+
+  <h2 data-lang-zh="瓶颈很少在模型">The bottleneck is rarely the model</h2>
+  <p data-lang-zh="实践中，约束通常在别处：工具怎么设计，以及智能体背着多少上下文。一个能力很强但工具接口别扭的模型，会输给一个能力一般但接口干净的模型。">In practice the constraint is usually elsewhere: how the tools are shaped, and how much context the agent is carrying. A capable model behind an awkward tool interface will lose to a modest model behind a clean one.</p>
+  <p data-lang-zh="「能力越强越好」是个容易说出口、很难站住的假设。一个简单、可预测、失败得清清楚楚的系统，比一个全能但失败得莫名其妙的系统更值得信任。">More capable is better is an easy assumption to make and a hard one to defend. A simple, predictable system that fails in readable ways is easier to trust than an all-purpose one that fails in surprising ways.</p>
+  <p data-lang-zh="如果一个任务能拆成每一步都可验证的环节，这种拆解带来的可靠性提升，比换一个更聪明的提示词更多。">If a task can be decomposed so that every step is verifiable, that decomposition buys more reliability than a smarter prompt.</p>
+
+  <h2 data-lang-zh="还没定论的部分">What is still open</h2>
+  <p data-lang-zh="这些结论来自有限的项目样本，普适性我还无法确认。当作工作中的笔记，而不是定论。">These conclusions come from a limited set of projects, and how far they generalise is not something I can yet establish. Treat them as working notes rather than settled results.</p>
+</article>
+
+<footer class="site-footer article-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jianqiang. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

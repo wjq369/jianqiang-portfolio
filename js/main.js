@@ -65,12 +65,12 @@ if (track) {
 }
 
 // Capture original HTML BEFORE any language switching
-const _origHTML = {};
+// Keyed by element: many elements share the same tag and class, and a selector
+// based key would let one of them overwrite the others.
+const _origHTML = new Map();
 var langEls = document.querySelectorAll('[data-lang-en], [data-lang-zh]');
 for (var i = 0; i < langEls.length; i++) {
-  var el = langEls[i];
-  var key = el.tagName + '|' + (el.className || '') + '|' + (el.id || '');
-  if (!_origHTML[key]) _origHTML[key] = el.innerHTML;
+  if (!_origHTML.has(langEls[i])) _origHTML.set(langEls[i], langEls[i].innerHTML);
 }
 
 // Swap every remaining text node listed in js/i18n.js (keys are the English
@@ -133,9 +133,7 @@ function applyLanguage(lang) {
   // Restore all elements to their original state first
   var allLangEls = document.querySelectorAll('[data-lang-en], [data-lang-zh]');
   for (var i = 0; i < allLangEls.length; i++) {
-    var el = allLangEls[i];
-    var key = el.tagName + '|' + (el.className || '') + '|' + (el.id || '');
-    if (_origHTML[key] !== undefined) el.innerHTML = _origHTML[key];
+    if (_origHTML.has(allLangEls[i])) allLangEls[i].innerHTML = _origHTML.get(allLangEls[i]);
   }
   document.body.classList.remove('lang-en', 'lang-zh');
   document.body.classList.add('lang-' + lang);
