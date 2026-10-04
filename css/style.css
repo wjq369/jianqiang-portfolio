@@ -593,12 +593,16 @@ a:hover { color: var(--clr-accent); }
 /* Language switching: main.js rewrites the content of [data-lang-*] elements,
    so nothing here may force a display value — headings and paragraphs must
    keep their block layout. */
-[data-lang-zh]:not([data-lang-en]) { display: none; }
+
 /* Copy available in one language only: hide it unless that language is active,
-   and restore its natural display when it is. */
+   and restore its natural display when it is.
+   Article pages are excluded: there the English copy is written inline and
+   data-lang-zh holds the Chinese alternative, so those elements are bilingual
+   rather than Chinese-only and must keep their natural display. */
+body:not(:has(.article-page)) [data-lang-zh]:not([data-lang-en]) { display: none; }
 body.lang-zh [data-lang-en]:not([data-lang-zh]) { display: none !important; }
-body.lang-en [data-lang-zh]:not([data-lang-en]) { display: none !important; }
-body.lang-zh [data-lang-zh]:not([data-lang-en]) { display: revert !important; }
+body.lang-en:not(:has(.article-page)) [data-lang-zh]:not([data-lang-en]) { display: none !important; }
+body.lang-zh:not(:has(.article-page)) [data-lang-zh]:not([data-lang-en]) { display: revert !important; }
 /* Inline SVG book covers */
 body.lang-en .svg-cn { display: none !important; }
 body.lang-en .svg-en { display: inline !important; }
