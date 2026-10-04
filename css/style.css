@@ -44,6 +44,9 @@ a:hover { color: var(--clr-accent); }
   display: flex; align-items: center; justify-content: space-between;
   height: 64px;
 }
+.header-brand {
+  display: flex; align-items: center;
+}
 .logo {
   display: flex; align-items: center; gap: 10px;
   font-family: var(--font-serif);
@@ -56,11 +59,11 @@ a:hover { color: var(--clr-accent); }
   border-radius: 50%; display: grid; place-items: center;
   font-size: 1rem; font-weight: 700;
 }
-.main-nav { display: flex; gap: 28px; }
+.main-nav { display: flex; gap: 12px; }
 .main-nav a {
-  font-size: 0.875rem; font-weight: 500;
+  font-size: 0.75rem; font-weight: 500;
   color: var(--clr-text-muted);
-  text-transform: uppercase; letter-spacing: 0.06em;
+  text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;
 }
 .main-nav a:hover { color: var(--clr-primary); }
 
@@ -73,7 +76,8 @@ a:hover { color: var(--clr-accent); }
   background: var(--clr-primary); transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+/* The 12 section links cannot fit on one row with the logo below this width. */
+@media (max-width: 1090px) {
   .nav-toggle { display: flex; }
   .main-nav {
     display: none; position: absolute; top: 64px; left: 0; right: 0;
@@ -577,6 +581,7 @@ a:hover { color: var(--clr-accent); }
   border-radius: 20px;
   cursor: pointer;
   letter-spacing: 0.05em;
+  white-space: nowrap;
   transition: all 0.2s;
   margin-left: 12px;
 }
